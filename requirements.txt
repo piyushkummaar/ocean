@@ -1,0 +1,9 @@
+Django==3.0.3
+django-allauth==0.41.0
+django-bootstrap4==1.1.1
+django-crispy==1.8.1
+Pillow==7.0.0
+django-material-admin==1.6.44
+django-material==1.6.3
+numpy==1.18.1
+django-filter==2.2.0

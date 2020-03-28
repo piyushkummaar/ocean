@@ -1,0 +1,8 @@
+db.sqlite3
+media/*.jpg
+media/*.png
+
+**/*.pyc
+**/__pycache__
+
+migrations/*.py

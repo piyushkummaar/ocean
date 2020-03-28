@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'd-includes/head.html' %}
+<body class="">
+  <div class="wrapper">
+    {% include 'd-includes/sidebar.html' %}
+    <div class="main-panel">
+      {% include 'd-includes/navbar.html' %}
+     
+        <div class="content">
+
+            <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header"><i class="fa fa-table"></i> Pool Team</div>
+            <center><br>
+                          <form method="GET">
+              
+                <select class="form-control-rounded single-select col-lg-4 col-xs-10" onchange="this.form.submit()" name="id" style="padding: 5px;text-align: center;">
+                  <option value="1" selected="">Active Rank</option>
+                  <option value="2">Smart Rank</option>
+                  <option value="3">Silver Rank</option>
+                  <option value="4">Tonix Rank</option>
+                  <option value="5">Onix Rank</option>
+                  <option value="6">Finix Rank</option>
+                  <option value="7">Horex Rank</option>
+                </select>
+            </form>
+          </center>
+            <div class="card-body">
+              <div class="table-responsive">
+              <table id="example" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Required</th>
+                        <th>Achieved</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>16</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>64</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>256</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>1024</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>4096</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>16384</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>65536</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>262144</td>
+                        <td>0</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        </div>
+
+      {% include 'd-includes/footer_mode.html' %}
+  {% include 'd-includes/scripts.html' %}
+</body>
+
+</html>

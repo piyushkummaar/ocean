@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'd-includes/head.html' %}
+
+<body class="">
+  <div class="wrapper">
+    {% include 'd-includes/sidebar.html' %}
+    <div class="main-panel">
+      {% include 'd-includes/navbar.html' %}
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="places-buttons">
+                  <div class="row">
+                    <div class="col-md-6 ml-auto mr-auto text-center">
+                      <h4 class="card-title">
+                        Tree
+                        <p class="category">All Fast Income List Shown Below :</p>
+                      </h4>
+                      <div class="alert alert-primary">
+                        <span>Fast Level Income</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-8 ml-auto mr-auto">
+                      <div class="row">
+                        {% for object in object_list %}
+                        <div class="card">
+                        <div class="col-sm-4 col-md-4">
+                          <h2>{{ object.membership_type }}</h2>
+                          <p>Price: ₹{{ object.price }}<small>/month</small></p>
+                          <ul>
+                            {% for course in object.course_set.all %}
+                            <li>{{ course.title }}</li>
+                            {% endfor %}
+                          </ul>
+                          <h4>Level : {{object.level}} </h4>
+                          {% if object.membership_type != 'Free' %}
+                          <form method="POST" action="{% url 'select' %}">
+                            {% csrf_token %}
+                            {% if object.membership_type != current_membership %}
+                            <button class="btn btn-warning">Select</button>
+                            {% else %}
+                            <small>This is your current membership</small>
+                            {% endif %}
+                            <input type="hidden" name="membership_type" value="{{ object.membership_type }}">
+                          </form>
+                          {% endif %}
+                        </div>
+                        
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {% include 'd-includes/footer_mode.html' %}
+      {% include 'd-includes/scripts.html' %}
+</body>
+
+</html>

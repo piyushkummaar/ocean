@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'd-includes/head.html' %}
+<body class="">
+  <div class="wrapper">
+    {% include 'd-includes/sidebar.html' %}
+    <div class="main-panel">
+      {% include 'd-includes/navbar.html' %}
+     
+        <div class="content">
+
+            <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header"><i class="fa fa-table"></i> Team Downline</div>
+
+            <center><br>
+                          <form method="GET">
+              
+                <select class="form-control-rounded single-select col-lg-4 col-xs-10" onchange="this.form.submit()" name="id" style="padding: 5px;text-align: center;">
+                  <option value="">All Rank</option>
+                  <option value="1">Active Rank</option>
+                  <option value="2">Smart Rank</option>
+                  <option value="3">Silver Rank</option>
+                  <option value="4">Tonix Rank</option>
+                  <option value="5">Onix Rank</option>
+                  <option value="6">Finix Rank</option>
+                  <option value="7">Horex Rank</option>
+                </select>
+            </form>
+          </center>
+
+            <div class="card-body">
+              <div class="table-responsive">
+              <table class="table table-bordered" style="margin-bottom: 20px;">
+                <thead>
+                    <tr>                      
+                        <th>Level </th>
+                        <th>Members</th>
+                        <th>View Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                      <tr>
+                        <td><span class="shadow-warning">1</span></td>
+                        <td><span class="shadow-warning">8</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=1&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">2</span></td>
+                        <td><span class="shadow-warning">9</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=2&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">3</span></td>
+                        <td><span class="shadow-warning">5</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=3&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">4</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=4&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">5</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=5&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">6</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=6&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">7</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=7&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">8</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=8&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">9</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=9&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">10</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=10&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">11</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=11&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      <tr>
+                        <td><span class="shadow-warning">12</span></td>
+                        <td><span class="shadow-warning">0</span></td>
+                        <td><span class="badge badge-warning shadow-warning"><a href="team_view?level=12&amp;rank=" style="color:white">View</a></span></td>
+                    </tr>
+                     
+                                      
+                </tbody>
+                
+            </table>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        </div>
+
+      {% include 'd-includes/footer_mode.html' %}
+  {% include 'd-includes/scripts.html' %}
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include 'includes/head.html'%}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            color:aliceblue;
+        }
+        .bg-nav{
+            background: rgb(10,5,107);
+            background: linear-gradient(90deg, rgba(10,5,107,0.7259278711484594) 0%, rgba(127,0,255,1) 35%);
+        }
+
+    </style>
+</head>
+<body>
+<!-- <nav id="navbar-clone" class="navbar is-fixed bg-nav">
+    <div class="container">
+        Brand
+        <div class="navbar-brand mx-auto">
+            <a href="/" class="navbar-item">
+                <img class="rotating" src="/static/assets/img/logo/krypton-gradient.svg" alt="">
+                <span class="brand-name">Ocean</span>
+            </a>
+        </div>
+    </div>
+</nav> -->
+    {% block content%}
+    {%endblock%}
+{% include 'includes/scripts.html' %}
+</body>
+
+</html>

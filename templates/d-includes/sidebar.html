@@ -1,0 +1,72 @@
+
+    <div class="sidebar">
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="{% url 'dashbord' %}" class="simple-text logo-mini">
+                    <!-- ico -->
+                </a>
+                <a href="{% url 'dashbord' %}" class="simple-text logo-normal">
+                    Ocean Money
+                </a>
+            </div>
+            <br>
+            <ul style="color:white;"><i class="tim-icons icon-chart-pie-36"></i> <a style="color:white;" href="{% url 'dashbord' %}">Dashboard</a> 
+                
+            </ul>
+            <ul style="color:white;" data-toggle="collapse" data-target="#demo"><i class="fa fa-user" aria-hidden="true"><a style="color:white;" href="#"></i> Profile
+            <li id="demo" class="collapse"> <a style="color:white;" href="{% url 'user_profile' %}">Personal Detail</a> </li>
+            <li id="demo" class="collapse"><a style="color:white;" href="#"> Account Detail</li>
+            <li id="demo" class="collapse"><a style="color:white;" href="#"> Docoment Verification</li>
+            <li id="demo" class="collapse"><a style="color:white;" href="#">Change Password</li>
+            </ul>
+            <ul style="color:white;" data-toggle="collapse" data-target="#fund"><i class="tim-icons icon-wallet-43"></i> Add Fund
+                <li id="fund" class="collapse">  <a style="color:white;" href="{% url 'exchange_fund' %}"> Exchange Fund</a></li>
+                <li id="fund" class="collapse">  <a style="color:white;" href="{% url 'inr_fund' %}"> INR Fund</a></li>
+            </ul>
+            <ul style="color:white;" data-toggle="collapse" data-target="#trans"><i class="tim-icons icon-notes"><a style="color:white;" href="#"></i> Transaction
+                <li id="trans" class="collapse"> <a style="color:white;" href="{% url 'wallet_transfer' %}"> Wallet Transfer</a></li>
+                <li id="trans" class="collapse"> <a style="color:white;" href="{% url 'roi_buy' %}"> ROI BUY/SELL</a></li>
+            </ul>
+            {% comment %} <ul style="color:white;"><i class="tim-icons icon-chart-pie-36"></i> <a style="color:white;" href="#">Activation</a> {% endcomment %}
+            
+            </ul>
+            <ul style="color:white;"><i class="tim-icons icon-puzzle-10"></i> <a style="color:white;" href="{% url 'select' %}">Upgration</a>
+            
+            </ul>
+            <ul style="color:white;" data-toggle="collapse" data-target="#income"><i class="tim-icons icon-bank"><a style="color:white;" href="#"></i> Income
+                <li id="income" class="collapse">  <a style="color:white;" href="{% url 'direct_income' %}"> Direct Income</a> </li>
+                <li id="income" class="collapse"> <a style="color:white;" href="{% url 'level_income' %}"> Level Income</a></li>
+                <li id="fund" class="collapse"> <a style="color:white;" href="{% url 'fast_income' %}"> Fast Income</a></li>
+                <li id="income" class="collapse"> <a style="color:white;" href="{% url 'prime_pool' %}"> Prime Pool</a></li>
+            </ul>
+            <ul style="color:white;" data-toggle="collapse" data-target="#team"><i class="tim-icons icon-user"></i> <i class="tim-icons icon-coins"><a style="color:white;" href="#"></i> Team
+                <li id="team" class="collapse"> <a style="color:white;" href="{% url 'direct_team' %}"> Direct Team</a> </li>
+                <li id="team" class="collapse"> <a style="color:white;" href="{% url 'downline_team' %}"> Downline Team</a></li>
+                <li id="team" class="collapse"> <a style="color:white;" href="{% url 'prime_pool_team' %}"> Prime Pool Team</a></li>
+            </ul>
+            <ul style="color:white;" data-toggle="collapse" data-target="#pay"><i class="tim-icons icon-user"></i> <i class="tim-icons icon-wallet-43"><a style="color:white;" href="#"></i> Payout
+                <li id="pay" class="collapse"> <a style="color:white;" href="#"> Exchange Transfer</a></li>
+                <li id="pay" class="collapse"> <a style="color:white;" href="#"> Bank Transfer</a></li>
+            </ul>
+            
+            <ul style="color:white;"><i class="tim-icons icon-chart-pie-36"></i> <a style="color:white;" href="#">History</a>
+            
+            </ul>
+            <ul style="color:white;"><i class="fa fa-sign-out" aria-hidden="true"></i> <a style="color:white;" href="{% url 'account_logout'%}" >Logout</a>
+            
+            </ul>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+                $(".wal").click(function () {
+                alert("Wallet is desable for seurity purpose comming soon..");
+            });
+            });
+        $(document).ready(function () {  
+            $("p").click(function () {
+                    alert("This is under progress that will be comming soon..");
+                });
+            });
+    </script> -->

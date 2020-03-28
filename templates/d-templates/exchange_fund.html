@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'd-includes/head.html' %}
+<body class="">
+  <div class="wrapper">
+    {% include 'd-includes/sidebar.html' %}
+    <div class="main-panel">
+      {% include 'd-includes/navbar.html' %}
+     
+        <div class="content">
+
+        <div class="row">
+			<div class="col-lg-10 mx-auto">
+			    			   <div class="card" style="margin-top: 45px;">
+			     <div class="card-body">
+				   <div class="card-title">Add Balance</div>
+				   <hr>
+				    <form method="POST">
+					 <div class="form-group">
+					  <label for="input-7">Amount</label>
+					  <input type="number" id="amount" name="amount" class="form-control form-control-rounded" placeholder="Enter amount to be add in USD" min="25" required="">
+    
+					 </div>
+
+           <div class="form-group">
+            <label for="input-7">Coin</label>
+            <select name="coin_type" class="form-control form-control-rounded" id="input-7" required="">
+              <option value="">Select Coin</option>
+              <option value="BTC">BTC (Bitcoin)</option>
+              <option value="ETH">ETH (Etherium)</option>
+              <option value="LTC">LTC (Litecoin)</option>
+              <option value="BCH">BCH (Bitcoin Cash)</option>
+            </select>
+    
+           </div>
+
+
+		
+					 <div class="form-group">
+					  <center><button type="submit" value="submit" name="submit" class="btn btn-primary shadow-primary btn-round px-5"><i class="icon-lock"></i> Proceed</button></center>
+					</div>
+					</form>
+				 </div>
+			   </div>
+			 
+			</div>
+		  </div>
+
+        </div>
+
+      {% include 'd-includes/footer_mode.html' %}
+  {% include 'd-includes/scripts.html' %}
+</body>
+
+</html>

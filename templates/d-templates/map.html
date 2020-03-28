@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'd-includes/head.html' %}
+<body class="">
+  <div class="wrapper">
+    {% include 'd-includes/sidebar.html' %}
+    <div class="main-panel">
+      {% include 'd-includes/navbar.html' %}
+      <div class="content">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card  card-plain">
+              <div class="card-header">
+                <h4 class="card-title"> Global Sales by Top Locations</h4>
+                <p class="category">All product that will shipped worldwide</p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive ps">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                      <tr>
+                        <th>
+                          flag
+                        </th>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Country
+                        </th>
+                        <th>
+                          City
+                        </th>
+                        <th class="text-center">
+                          Salary
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><img src="https://www.countryflags.io/ne
+                          /shiny/64.png"></td>
+                        <td>
+                          Dakota Rice
+                        </td>
+                        <td>
+                          Niger
+                        </td>
+                        <td>
+                          Oud-Turnhout
+                        </td>
+                        <td class="text-center">
+                          $36,738
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="https://www.countryflags.io/cw/shiny/64.png"></td>
+                        <td>
+                          Minerva Hooper
+                        </td>
+                        <td>
+                          Curaçao
+                        </td>
+                        <td>
+                          Sinaai-Waas
+                        </td>
+                        <td class="text-center">
+                          $23,789
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="https://www.countryflags.io/nl/shiny/64.png"></td>
+                        <td>
+                          Sage Rodriguez
+                        </td>
+                        <td>
+                          Netherlands
+                        </td>
+                        <td>
+                          Baileux
+                        </td>
+                        <td class="text-center">
+                          $56,142
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="https://www.countryflags.io/kr/shiny/64.png"></td>
+                        <td>
+                          Philip Chaney
+                        </td>
+                        <td>
+                          Korea, South
+                        </td>
+                        <td>
+                          Overland Park
+                        </td>
+                        <td class="text-center">
+                          $38,735
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="https://www.countryflags.io/mw/shiny/64.png"></td>
+                        <td>
+                          Doris Greene
+                        </td>
+                        <td>
+                          Malawi
+                        </td>
+                        <td>
+                          Feldkirchen in Kärnten
+                        </td>
+                        <td class="text-center">
+                          $63,542
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="https://www.countryflags.io/cl/shiny/64.png"></td>
+                        <td>
+                          Mason Porter
+                        </td>
+                        <td>
+                          Chile
+                        </td>
+                        <td>
+                          Gloucester
+                        </td>
+                        <td class="text-center">
+                          $78,615
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                  </div>
+                  <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card card-plain">
+              <div class="card-header">
+              </div>
+              <div class="card-body">
+                <div id="map" class="map">
+                  <div class="card mt-5">
+                    <img height="420px" src="{% static 'd-assets/world-map.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include 'd-includes/footer_mode.html' %}
+  {% include 'd-includes/scripts.html' %}
+</body>
+
+</html>
