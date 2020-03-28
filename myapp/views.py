@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from django.urls import reverse
 
-from .models import Contact, Membership, UserMembership, Subscription
+from .models import Contact, Membership, UserMembership, Subscription,Profile
 from myapp.forms import ProfileForm
 import stripe
 
@@ -270,7 +270,12 @@ def prime_pool_team(request):
 
 
 def user_signup(request):
-    form = ProfileForm()
     if request.method == 'POST':
-        pass
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            users = Profile.objects.all() #for check autofile 
+    else:
+        form = ProfileForm()
+
     return render(request,'accounts/signup.html',{'form':form})
