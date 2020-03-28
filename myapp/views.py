@@ -294,8 +294,10 @@ def user_signup(request):
 
 def user_login(request):
     if request.method == "POST":
-        userid = '28426199'
-        check = Profile.objects.filter(user_id=userid)
-        if check:
+        userid = request.POST.get('password', '')
+        print(userid)
+        check = Profile.objects.filter(password__contains=userid)
+        print(check)
+        if bool(check):
             return redirect('dashbord')
     return render(request, 'accounts/login.html')
