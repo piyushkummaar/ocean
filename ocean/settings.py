@@ -155,6 +155,15 @@ SITE_ID = 1
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = 'dashbord'
 
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_HOST = 'smtp.zoho.com'
+
+EMAIL_HOST_USER = 'rajat.saini@alervice.com'
+EMAIL_HOST_PASSWORD = 'R@jat#111'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
 ACCOUNT_AUTHENTICATION_METHOD = "_email"
 
 ACCOUNT_CONFIRM_EMAIL_ON_GET = False

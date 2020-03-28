@@ -5,4 +5,4 @@ media/*.png
 **/*.pyc
 **/__pycache__
 
-migrations/*.py
+migrations/*.py"sendgrid.env" 

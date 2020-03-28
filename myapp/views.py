@@ -1,3 +1,4 @@
+from django.core.mail import EmailMessage
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -6,7 +7,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from django.urls import reverse
-
+from django.core import mail
 from .models import Contact, Membership, UserMembership, Subscription,Profile
 from myapp.forms import ProfileForm
 import stripe
@@ -269,12 +270,23 @@ def prime_pool_team(request):
     return render(request,'d-templates/prime_pool_team.html')
 
 
+from django.core.mail import send_mail
+
 def user_signup(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST)
         if form.is_valid():
+            email = EmailMessage(
+                subject='Hello',
+                body='Body goes here',
+                from_email='rajat.saini@alervice.com',
+                to=['pk554115@gmail.com'],
+                reply_to=['rajat.saini@alervice.com'],
+                headers={'Content-Type': 'text/plain'},
+            )
             form.save()
             users = Profile.objects.all() #for check autofile 
+            return redirect('/')
     else:
         form = ProfileForm()
 
