@@ -17,7 +17,7 @@
                         {{ form.as_p }}
                         <button type="submit" class="save btn btn-default">Save</button>
                     </form>
-                    <form  method="POST" id="post-form">
+                    <!-- <form  method="POST" id="post-form">
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="exampleInputName">Name</label>
@@ -51,17 +51,10 @@
                             <input type="text" class="form-control" id="exampleInputCountry" placeholder="Country">
                         </div>
                         <button type="submit" class="btn btn-outline-primary">Submit</button>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script>
-    $('#form').on('submit', function (event) {
-            event.preventDefault();
-            console.log("form submitted!")  // sanity check
-            create_post();
-        });
-</script>
 {% endblock %}
