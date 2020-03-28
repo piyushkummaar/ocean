@@ -7,7 +7,8 @@ from .views import (
     updateTransactionRecords,
     profile_view,
     cancelSubscription, 
-    user_signup
+    user_signup,
+    user_login
 )
 
 urlpatterns = [
@@ -40,6 +41,7 @@ urlpatterns = [
     path('direct_team/', views.direct_team, name='direct_team'),
     path('downline_team/', views.downline_team, name='downline_team'),
     path('prime_pool_team/', views.prime_pool_team, name='prime_pool_team'),
-    path('registeration',views.user_signup, name='register')
+    path('registeration',views.user_signup, name='register'),
+    path('login', views.user_login, name="login")
 
 ]

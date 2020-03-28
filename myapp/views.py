@@ -285,9 +285,17 @@ def user_signup(request):
                 headers={'Content-Type': 'text/plain'},
             )
             form.save()
-            users = Profile.objects.all() #for check autofile 
+            users = Profile.objects.all()  # for check autofile
             return redirect('/')
     else:
         form = ProfileForm()
 
     return render(request,'accounts/signup.html',{'form':form})
+
+def user_login(request):
+    if request.method == "POST":
+        userid = '28426199'
+        check = Profile.objects.filter(user_id=userid)
+        if check:
+            return redirect('dashbord')
+    return render(request, 'accounts/login.html')
